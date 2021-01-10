@@ -7,7 +7,30 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1 id="test">Hello World</h1>
+    <!-- <h1 id="test">Hello World</h1> -->
+    <h1 id="question">Hello</h1>
+    <h2>Find the answer and the code will be their birth year.</h2>
+    <hr />
+    <div id="lock">
+      <p id="screen">0</p>
+      <div id="number-pad">
+        <button onClick="addNumber(this.id)" id="1">1</button>
+        <button onClick="addNumber(this.id)" id="2">2</button>
+        <button onClick="addNumber(this.id)" id="3">3</button>
+        <br />
+        <button onClick="addNumber(this.id)" id="4">4</button>
+        <button onClick="addNumber(this.id)" id="5">5</button>
+        <button onClick="addNumber(this.id)" id="6">6</button>
+        <br />
+        <button onClick="addNumber(this.id)" id="7">7</button>
+        <button onClick="addNumber(this.id)" id="8">8</button>
+        <button onClick="addNumber(this.id)" id="9">9</button>
+        <br />
+        <button onClick="deleteNumber()" id="delete">Delete</button>
+        <button onClick="addNumber(this.id)" id="0">0</button>
+        <button onClick="submit()" id="enter">Enter</button>
+      </div>
+    </div>
     <hr />
     <h1 id="hidden-message" hidden>You won</h1>
     <div dice></div>
