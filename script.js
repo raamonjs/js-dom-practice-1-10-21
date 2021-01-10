@@ -4,7 +4,9 @@
 
 // setup
 let hiddenMessage = document.getElementById('hidden-message');
-let currentPin = [];
+let correctAnswer = document.getElementById('correct-answer');
+
+let currentPin;
 let correctPin;
 
 // Questions
@@ -42,8 +44,8 @@ const questions = [
 ];
 
 // game functions
-const showHiddenMessage = () => {
-  hiddenMessage.removeAttribute('hidden');
+const showHiddenContent = () => {
+  correctAnswer.removeAttribute('hidden');
 };
 
 const generateRandomNumber = () => {
@@ -73,7 +75,7 @@ const deleteNumber = () => {
 
 const submit = () => {
   if (currentPin.join('') == correctPin) {
-    hiddenMessage.removeAttribute('hidden');
+    showHiddenContent();
     hiddenMessage.textContent =
       'You won! The birth year of ' +
       questions[randomNumber].answer +
@@ -83,12 +85,20 @@ const submit = () => {
   }
 };
 
+// restart game
+const restartGame = () => {
+  gameStart();
+};
+
 // start
 let gameStart = () => {
+  currentPin = [];
   randomNumber = generateRandomNumber();
   document.getElementById('question').textContent =
     questions[randomNumber].question;
   correctPin = questions[randomNumber].code;
+  document.getElementById('screen').textContent = 0;
+  correctAnswer.setAttribute('hidden', true);
   console.log(correctPin);
 };
 
