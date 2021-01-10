@@ -2,6 +2,7 @@
 let test = document.getElementById('test');
 test.textContent = 'Dice Roll';
 
+// setup
 let hiddenMessage = document.getElementById('hidden-message');
 
 const showHiddenMessage = () => {
